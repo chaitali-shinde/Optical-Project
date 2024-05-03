@@ -1,0 +1,723 @@
+/* use google poppins font.... */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 70%;
+    overflow-x: hidden;
+}
+
+/* snav........... */
+
+.help{
+    width: 100%;
+    min-height: 30px;
+    background: rgb(189, 221, 231);
+    display: flex;
+    flex-direction: row;
+}
+
+.help .snav{
+    height: 45px; 
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 11px;
+}
+
+.help .snav p{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+/* navbar.............. */
+.header{
+    height: auto;
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background-color: white;
+    /* box-shadow: 0.5rem 1rem rgba(0, 0, 0, .1); */
+    box-shadow: 2px 9px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-content: center; 
+}
+
+.logo{
+    font-size:35px ;
+    font-style: italic;
+    color: black;
+    font-weight: bolder;
+    margin: auto;
+    text-decoration: none;
+    padding-left: 30px;
+    /* padding: 15px; */
+}
+
+/* .logo img{
+    width: 220px;
+    height: 110px;
+} */
+
+.navbar{
+    margin: auto;
+}
+
+.navbar ul{
+    list-style:none ;
+}
+
+.navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.navbar ul li:hover ul{
+    display: block;
+}
+
+.navbar ul li a{
+    font-size: 1.7rem;
+    color:rgb(41, 41, 42);
+    padding: 2rem;
+    display: block;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover{
+    text-decoration: underline;
+    color: black;
+}
+
+.navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 20rem;
+    background: white;
+    display: none;
+
+}
+
+.navbar ul li ul li{
+    width: 100%;
+}
+
+.icons{
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    cursor:pointer; 
+    margin: auto;
+    /* padding: 30px; */
+}
+
+.icons:hover{
+    color: rgb(235, 16, 53);
+}
+
+.icons a{
+    font-size: 30px;
+    color: black;
+    cursor:pointer;
+    text-decoration: none;
+}
+
+.icons a:hover{
+    color: rgb(235, 16, 53);
+}
+
+
+
+/* carousel/ home section starts............ */
+#carouselExampleCaptions{
+    width: 100%;
+    height: 90vh;
+}
+
+.carousel-item{
+    /* border: 1px solid red; */
+    height: 90vh;
+    width: 100%;
+}
+
+#carouselExampleCaptions .carousel-inner #s1 #slide1{
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#carouselExampleCaptions .carousel-inner #s1 #slide1 p{
+     font-size: 20px;
+     color: black;
+     font-weight: 800;
+}
+
+#carouselExampleCaptions .carousel-inner #s1 #slide1 h3{
+    font-size: 60px;
+    font-weight: bold;
+    color: black;
+}
+
+#carouselExampleCaptions .carousel-inner #s1 #slide1 .btn{
+    width: 90px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+    color:black;
+    text-align: center;
+    justify-content: center;
+}
+
+#carouselExampleCaptions .carousel-inner #s1 #slide1 .btn:hover{
+    background-color: black;
+    color: white;
+   
+}
+
+#carouselExampleCaptions .carousel-inner #s2 #slide2 p{
+    font-size: 20px;
+    color: black;
+    font-weight: 800;
+}
+
+#carouselExampleCaptions .carousel-inner #s2 #slide2 h3{
+   font-size: 60px;
+   font-weight: bold;
+   color: black;
+}
+
+#carouselExampleCaptions .carousel-inner #s2 #slide2 .btn{
+    width: 90px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+    color:black;
+    text-align: center;
+    justify-content: center;
+}
+
+#carouselExampleCaptions .carousel-inner #s2 #slide2 .btn:hover{
+    background-color: black;
+    color: white;
+   
+}
+
+#carouselExampleCaptions .carousel-inner #s3 #slide3 p{
+    font-size: 20px;
+    color: black;
+    font-weight: 800;
+}
+
+#carouselExampleCaptions .carousel-inner #s3 #slide3 h3{
+   font-size: 60px;
+   font-weight: bold;
+   color: black;
+}
+
+#carouselExampleCaptions .carousel-inner #s3 #slide3 .btn{
+    width: 90px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+    color:black;
+    text-align: center;
+    justify-content: center;
+}
+
+#carouselExampleCaptions .carousel-inner #s3 #slide3 .btn:hover{
+    background-color: black;
+    color: white;
+   
+}
+
+
+/* infinite automatically flow slider..................... */
+
+
+.slider{
+    height: 150px;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    /* background: lightgray; */
+    margin-top: 5px;
+    /* border: 1px solid red; */
+}
+
+/* Setting Up the Slide Track */
+.slide-track{
+    display: flex;
+    width: calc(250px * 18);
+    /* In this width the 18 represents the num of images. i have taken 9 images 2 times. */
+    animation: scroll 40s linear infinite;
+}
+
+.slide-track:hover{
+    animation-play-state: paused;
+}
+
+
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px*9));
+    }
+}
+
+.slide{
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+
+img{
+    width: 100%;
+    transition: transform 1s;
+}
+
+img:hover{
+    transform: translateZ(20px);
+}
+
+/* Gradient Shadows */
+
+/* .slider::before,
+.slider::after{
+    background: linear-gradient(to right,rgba(255,255,255,1)0%,
+    rgba(255,255,255,0)100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+} */
+
+.slider::before{
+    left: 0;
+    top: 0;
+}
+
+.slider::after{
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+
+/* banner......................... */
+.banner{
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+    /* flex-wrap: wrap; */
+    /* flex-direction: row;
+    justify-content: space-between; */
+    /* background-color: black; */
+}
+
+.banner .box{
+    position: relative;
+    height: 50vh;
+    overflow: hidden;
+    border-radius: 0.5rem;  
+}
+
+.banner .box img{
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+
+.banner .box:hover{
+    transform: scale(1.1);
+}
+
+.banner .box .content{
+    position: absolute;
+    top: 60%; right: 10rem;
+    /* transform: translateY(-50%); */
+    text-align: center;
+    justify-content: center;
+    /* text-decoration: underline; */
+}
+
+.banner .box .content p{
+    font-size: 15px;
+    color: black;
+}
+
+.banner .box .content h3{
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+}
+
+.banner .box .content .btn{
+    width: 100px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 15px;
+    color:black;
+}
+
+.banner .box .content .btn:hover{
+    background-color: black;
+    color: white;
+}
+
+
+/* baneer--1............................. */
+.banner1{
+    display: flex;
+    gap: 25px;
+    /* flex-wrap: wrap; */
+    /* flex-direction: row;
+    justify-content: space-between; */
+    /* background-color: black; */
+}
+
+.banner1 .box{
+    position: relative;
+    height: 50vh;
+    overflow: hidden;
+    border-radius: 0.5rem;  
+}
+
+.banner1 .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner1 .box:hover{
+    transform: scale(1.1);
+}
+
+.banner1 .box .content{
+    position: absolute;
+    top: 60%; right: 10rem;
+    /* transform: translateY(-50%); */
+    text-align: center;
+    justify-content: center;
+    /* text-decoration: underline; */
+}
+
+.banner1 .box .content p{
+    font-size: 15px;
+    color: black;
+}
+
+.banner1 .box .content h3{
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+}
+
+.banner1 .box .content .btn{
+    width: 100px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 15px;
+    color:black;
+}
+
+.banner1 .box .content .btn:hover{
+    background-color: black;
+    color: white;
+}
+
+
+/* customer review............................ */
+
+.customer .head h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.review 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 25px;
+    
+}
+
+.review .rCard 
+{
+    width: 350px;
+    height: 600px;
+    background-color: #eeee;
+    text-align: center;
+    padding: 16px;
+    margin-inline: 20px;
+    transition: 0.5s;
+    
+}
+
+.rCard:hover 
+{
+    background-color: rgb(146, 144, 144);
+    transition: 1s ease;
+    transform: translateY(-10px); 
+}
+
+.rCard img 
+{
+    width: 42%;
+    border-radius: 50%;
+    margin-top: 40px;
+}
+
+.rCard .names{
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.rCard p{
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+.rCard button 
+{
+    width: 100px;
+    height: 50px;
+    background-color:  rgb(9, 9, 9);
+    color: white;
+    border: none;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.blog 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.blog .blogCard 
+{
+    width: 300px;
+    /* height: 340px; */
+    text-align: center;
+    background-color: #fff;
+    margin-inline: 22px;
+    padding: 11px;
+    /* border-radius: 5px; */
+}
+.blogCard img 
+{
+    width: 100%;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.blogCard img:hover{
+    transform: translateY(-10px);
+}
+.blogCard a 
+{
+    padding: 4px 20px;
+    background-color: rgb(3,151,151);
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+.blogCard:hover 
+{  
+    transition: 1s ease;
+    background-color: gray;
+    cursor: pointer;
+}
+
+
+/* footer............. */
+section{
+    padding: 2rem 10%;  
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: black;
+    border: rgb(9, 9, 9);
+    background: none;
+    cursor: pointer;
+    border-radius: 2rem;
+    border: 2px solid black;
+}
+
+.btn:hover{
+    background: black;
+    color:white;
+}
+
+.footer .box-container{
+    /* grid: 25rem; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.2rem;
+    color: black;
+    padding: 1rem 0;
+    font-weight: bold;
+}
+
+.footer .box-container .box a{
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: block;
+    color: crimson;
+    padding: 1rem 0;
+    text-decoration: none;
+}
+
+.footer .box-container .box a:hover{
+    color: rgb(5, 5, 5);
+}
+
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+
+.footer .box-container .box a i{
+    color: crimson;
+    padding-right: 0.5rem;
+
+}
+
+form input[type="email"]{
+    width: 100%;
+    padding: 1rem 1.2rem;
+    border-radius: 0.2rem;
+    font-size: 1.6rem;
+    background: rgb(136, 137, 137);
+    text-transform: none;
+    margin: 0.5rem 0;
+}
+
+form input[type="email"]::placeholder{
+    color: black;
+    
+}
+
+.footer .box-container .box p{
+    font-size: 1.5rem;
+    color: rgb(57, 52, 51);
+    margin-bottom: 1rem;
+}
+
+.footer .credit{
+    text-align: center;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    margin-top: 2.5rem;
+    font-size: 2rem;
+    color: rgb(65, 65, 67);
+    border-top:1px solid black;
+}
+
+.footer .credit span{
+    color: rgb(220, 77, 101);
+}
+
+.footer .box-container .btn{
+    display: inline-block;
+    margin-top: 1rem;
+    /* padding: 8rem 2.8rem; */
+    font-size: 1.7rem;
+    color: black;
+    border: 2px solid black;
+    background: none;
+    cursor: pointer;
+}
+
+.footer .box-container .btn:hover{
+    background: black;
+    color: white;
+}
+
+
+
+
+
+
+/* ...........................media query................................. */
+
+@media(max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding: 0.2rem;
+    }
+    /* section.......... */
+    section{
+        padding: 2rem;
+    }
+}
+
+
+@media (max-width:768px){
+
+    .header{
+        display: grid;
+    }
+
+    .header ul{
+        display: grid;
+    }
+
+    .banner {
+        display: grid;
+    }
+
+    .banner1{
+        display: grid;
+    }
+
+    .footer .box-container{
+        display: grid;
+        text-align: center;
+        justify-content: center;
+    }
+
+}
+
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+}

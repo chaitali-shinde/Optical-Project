@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Autoplay Slider</title>
+    <link rel="stylesheet" href="./InfiniteSlider.cssp">
+</head>
+<body>
+    
+    <div class="slider">
+
+        <div class="slide-track">
+            
+            <!-- 9 Slides -->
+
+            <div class="slide">
+                <img src="./Images/1.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./Images/2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./Images/3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./Images/4.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./Images/5.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./Images/6.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./Images/7.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./Images/8.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./Images/9.jpg" alt="">
+            </div>
+
+            <!-- Repeat all those 9 images -->
+
+            <div class="slide">
+                <img src="./Images/1.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./Images/2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./Images/3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./Images/4.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./Images/5.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./Images/6.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./Images/7.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./Images/8.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./Images/9.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.slider{
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+/* Setting Up the Slide Track */
+.slide-track{
+    display: flex;
+    width: calc(250px * 18);
+    /* In this width the 18 represents the num of images. i have taken 9 images 2 times. */
+    animation: scroll 40s linear infinite;
+}
+
+.slide-track:hover{
+    animation-play-state: paused;
+}
+
+
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px*9));
+    }
+}
+
+.slide{
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+
+img{
+    width: 100%;
+    transition: transform 1s;
+}
+
+img:hover{
+    transform: translateZ(20px);
+}
+
+/* Gradient Shadows */
+
+/* .slider::before,
+.slider::after{
+    background: linear-gradient(to right,rgba(255,255,255,1)0%,
+    rgba(255,255,255,0)100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+} */
+
+.slider::before{
+    left: 0;
+    top: 0;
+}
+
+.slider::after{
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+
+
+
+
+
+
+
+<div id="carouselExampleCaptions" class="carousel slide carousel-fade">
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner" id="">
+      <div class="carousel-item active" id="s1">
+        <img src="./images/slide1.jpg" class="d-block w-100 " alt="...">
+        <div class="carousel-caption d-none d-md-block" id="slide1">
+              <p>protect your eyes</p>
+              <h3>Upto 50% off</h3>
+              <a href="#" class="btn">Shop Now</a>
+        </div>
+      </div>
+      <div class="carousel-item" id="s2">
+        <img src="./images/slide2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block" id="slide2">
+            <p>protect your eyes</p>
+            <h3>Upto 50% off</h3>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+      </div>
+      <div class="carousel-item" id="s3">
+        <img src="./images/slide3.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block" id="slide3">
+            <p>protect your eyes</p>
+            <h3>Upto 50% off</h3>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.carousel-item{
+    /* border: 1px solid red; */
+    height: 90vh;
+}
+
+#carouselExampleCaptions .carousel-inner #s1 #slide1 p{
+     font-size: 20px;
+     color: black;
+     font-weight: 800;
+}
+
+#carouselExampleCaptions .carousel-inner #s1 #slide1 h3{
+    font-size: 80px;
+    font-weight: bold;
+    color: black;
+}
+
+#carouselExampleCaptions .carousel-inner #s1 #slide1 .btn{
+    width: 90px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+    color:black;
+    text-align: center;
+    justify-content: center;
+}
+
+#carouselExampleCaptions .carousel-inner #s1 #slide1 .btn:hover{
+    background-color: black;
+    color: white;
+   
+}
+
+#carouselExampleCaptions .carousel-inner #s2 #slide2 p{
+    font-size: 20px;
+    color: black;
+    font-weight: 800;
+}
+
+#carouselExampleCaptions .carousel-inner #s2 #slide2 h3{
+   font-size: 80px;
+   font-weight: bold;
+   color: black;
+}
+
+#carouselExampleCaptions .carousel-inner #s2 #slide2 .btn{
+    width: 90px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+    color:black;
+    text-align: center;
+    justify-content: center;
+}
+
+#carouselExampleCaptions .carousel-inner #s2 #slide2 .btn:hover{
+    background-color: black;
+    color: white;
+   
+}
+
+#carouselExampleCaptions .carousel-inner #s3 #slide3 p{
+    font-size: 20px;
+    color: black;
+    font-weight: 800;
+}
+
+#carouselExampleCaptions .carousel-inner #s3 #slide3 h3{
+   font-size: 80px;
+   font-weight: bold;
+   color: black;
+}
+
+#carouselExampleCaptions .carousel-inner #s3 #slide3 .btn{
+    width: 90px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+    color:black;
+    text-align: center;
+    justify-content: center;
+}
+
+#carouselExampleCaptions .carousel-inner #s3 #slide3 .btn:hover{
+    background-color: black;
+    color: white;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="div-5">
+    <div class="div-5-1">
+        <h1>Testimonial</h1>
+        <a href="">Click Here <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <div class="div-5-2">
+        <div class="tony">
+            <p> The event security provided by Aliquam was exceptional. They were professional, attentive, and seamlessly blended into the background while ensuring the safety of everyone present. I’ll definitely be relying on their services for future events.</p><br>
+            <div class="info">
+                <div class="image">
+                    <img src="./tony.png" alt="" height="50px" width="50px">
+                </div>
+                <div class="names">
+                    <h4>TONY HAWK</h4>
+                    <h5>Google Reviewer​</h5>
+                </div>
+            </div>
+        </div>
+        <div class="julia">
+            <p>I’ve entrusted Aliquam Security with securing my business, and they’ve exceeded my expectations. The surveillance systems are top-notch, and their team is highly responsive. It’s clear they prioritize the safety of their clients. Highly recommended</p><br>
+            <div class="info">
+                <div class="image">
+                    <img src="./julia.png" alt="" height="50px" width="50px">
+                </div>
+                <div class="names">
+                    <h4>JULIA MILES​</h4>
+                    <h5>Yelp Reviewer​</h5>
+                </div>
+            </div>
+        </div>
+        <div class="john">
+            <p>I recently engaged Aliquam Security for personal protection services, and I couldn’t be more satisfied. The security personnel were discreet, yet I felt a reassuring presence. Thank you, Aliquam, for your commitment to client safety!</p><br>
+            <div class="info">
+                <div class="image">
+                    <img src="./john.png" alt="" height="50px" width="50px">
+                </div>
+                <div class="names">
+                    <h4>JOHN GOODMAN​​</h4>
+                    <h5>Google Reviewer​</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+
+
+
+
+
+
+
+
+.div-5{
+    width: 100%;
+    height: 55vh;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+    padding: 50px;
+}
+
+.div-5 .div-5-1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.div-5 .div-5-1 h1{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+.div-5 .div-5-1 a{
+    color: orangered;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.div-5 .div-5-2 {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2%;
+}
+
+.div-5 .div-5-2 p{
+    font-size: 22px;
+
+}
+
+.div-5 .div-5-2 .tony{
+    padding-right: 30px;
+}
+
+.div-5 .div-5-2 .julia{
+    padding-right: 30px;
+}
+
+.div-5 .div-5-2 .john{
+    padding-right: 30px;
+}
+
+.div-5 .div-5-2 .info{
+    display: flex;
+}
+
+.div-5 .div-5-2 .info .names{
+    padding-left: 20px;
+    padding-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.customer{
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(242, 242, 242);
+    box-sizing: border-box;
+    /* padding: 50px; */
+    /* border: 1px solid red; */
+}
+
+.customer .div-5-1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.customer .div-5-1 h1{
+    font-weight: bold;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-size: 35px;
+    margin-left: 10px;
+    text-decoration: underline;
+}
+
+.customer .div-5-1 a{
+    color: orangered;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.customer .div-5-2 {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2%;
+}
+
+.customer .div-5-2 p{
+    font-size: 20px;
+    line-height: 1.1;
+    color: rgb(85, 83, 83);
+}
+
+.customer .div-5-2 .tony{
+    padding-right: 30px;
+}
+
+.customer .div-5-2 .tony .info .names h4{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.customer .div-5-2 .julia{
+    padding-right: 30px;
+}
+
+.customer .div-5-2 .julia .info .names h4{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.customer .div-5-2 .john{
+    padding-right: 30px;
+}
+
+.customer .div-5-2 .john .info .names h4{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.customer .div-5-2 .info{
+    display: flex;
+}
+
+.customer .div-5-2 .info .names{
+    padding-left: 20px;
+    padding-top: 5px;
+}
+
+
+
+
+
+
+
+<section class="customer"> 
+    <div class="div-5-1">
+        <h1>Customer Review</h1>
+        <a href="">Click Here <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <div class="div-5-2">
+        <div class="tony">
+            <p> The event security provided by Aliquam was exceptional. They were professional, attentive, and seamlessly blended into the background while ensuring the safety of everyone present. </p><br>
+            <div class="info">
+                <div class="image">
+                    <img src="./images/tony.png" alt="" height="80px" width="80px">
+                </div>
+                <div class="names">
+                    <h4>TONY HAWK</h4>
+                    <h5>Google Reviewer</h5>
+                </div>
+            </div>
+        </div>
+        <div class="julia">
+            <p>The event security provided by Aliquam was exceptional. They were professional, attentive, and seamlessly blended into the background while ensuring the safety of everyone present. </p><br>
+            <div class="info">
+                <div class="image">
+                    <img src="./images/julia.png" alt="" height="80px" width="80px">
+                </div>
+                <div class="names">
+                    <h4>JULIA MILES</h4>
+                    <h5>Yelp Reviewer</h5>
+                </div>
+            </div>
+        </div>
+        <div class="john">
+            <p>The event security provided by Aliquam was exceptional. They were professional, attentive, and seamlessly blended into the background while ensuring the safety of everyone present.</p><br>
+            <div class="info">
+                <div class="image">
+                    <img src="./images/john.png" alt="" height="80px" width="80px">
+                </div>
+                <div class="names">
+                    <h4>JOHN GOODMAN</h4>
+                    <h5>Google Reviewer</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<div id="carouselExampleCaptions" class="carousel slide carousel-fade">
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    
+    <div class="carousel-inner" id="">
+      <div class="carousel-item active" id="s1">
+        <img src="./images/slide1.jpg" class="d-block w-100 " alt="...">
+        <div class="carousel-caption d-none d-md-block" id="slide1">
+              <p>protect your eyes</p>
+              <h3>Upto 50% off</h3>
+              <a href="./blogs.html" class="btn">Shop Now</a>
+        </div>
+      </div>
+      <div class="carousel-item" id="s2">
+        <img src="./images/slide2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block" id="slide2">
+            <p>protect your eyes</p>
+            <h3>Upto 50% off</h3>
+            <a href="./blogs.html" class="btn">Shop Now</a>
+        </div>
+      </div>
+      <div class="carousel-item" id="s3">
+        <img src="./images/slide3.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block" id="slide3">
+            <p>protect your eyes</p>
+            <h3>Upto 50% off</h3>
+            <a href="./blogs.html" class="btn">Shop Now</a>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="carouselExampleCaptions" class="carousel slide carousel-fade">
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    
+    <div class="carousel-inner" id="">
+      <div class="carousel-item active" id="s1">
+        <img src="./images/slide1.jpg" class="d-block w-100 " alt="...">
+        <div class="carousel-caption d-none d-md-block" id="slide1">
+              <p>protect your eyes</p>
+              <h3>Upto 50% off</h3>
+              <a href="./blogs.html" class="btn">Shop Now</a>
+        </div>
+      </div>
+      <div class="carousel-item" id="s2">
+        <img src="./images/slide2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block" id="slide2">
+            <p>protect your eyes</p>
+            <h3>Upto 50% off</h3>
+            <a href="./blogs.html" class="btn">Shop Now</a>
+        </div>
+      </div>
+      <div class="carousel-item" id="s3">
+        <img src="./images/slide3.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block" id="slide3">
+            <p>protect your eyes</p>
+            <h3>Upto 50% off</h3>
+            <a href="./blogs.html" class="btn">Shop Now</a>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
+
+
+
+
+
+#carouselExampleCaptions{
+    width: 100%;
+    height: 90vh;
+}
+
+.carousel-item{
+    /* border: 1px solid red; */
+    height: 90vh;
+    width: 100%;
+}
+
+#carouselExampleCaptions .carousel-inner #s1 #slide1 p{
+     font-size: 20px;
+     color: black;
+     font-weight: 800;
+}
+
+#carouselExampleCaptions .carousel-inner #s1 #slide1 h3{
+    font-size: 80px;
+    font-weight: bold;
+    color: black;
+}
+
+#carouselExampleCaptions .carousel-inner #s1 #slide1 .btn{
+    width: 90px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+    color:black;
+    text-align: center;
+    justify-content: center;
+}
+
+#carouselExampleCaptions .carousel-inner #s1 #slide1 .btn:hover{
+    background-color: black;
+    color: white;
+   
+}
+
+#carouselExampleCaptions .carousel-inner #s2 #slide2 p{
+    font-size: 20px;
+    color: black;
+    font-weight: 800;
+}
+
+#carouselExampleCaptions .carousel-inner #s2 #slide2 h3{
+   font-size: 80px;
+   font-weight: bold;
+   color: black;
+}
+
+#carouselExampleCaptions .carousel-inner #s2 #slide2 .btn{
+    width: 90px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+    color:black;
+    text-align: center;
+    justify-content: center;
+}
+
+#carouselExampleCaptions .carousel-inner #s2 #slide2 .btn:hover{
+    background-color: black;
+    color: white;
+   
+}
+
+#carouselExampleCaptions .carousel-inner #s3 #slide3 p{
+    font-size: 20px;
+    color: black;
+    font-weight: 800;
+}
+
+#carouselExampleCaptions .carousel-inner #s3 #slide3 h3{
+   font-size: 80px;
+   font-weight: bold;
+   color: black;
+}
+
+#carouselExampleCaptions .carousel-inner #s3 #slide3 .btn{
+    width: 90px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+    color:black;
+    text-align: center;
+    justify-content: center;
+}
+
+#carouselExampleCaptions .carousel-inner #s3 #slide3 .btn:hover{
+    background-color: black;
+    color: white;
+   
+}
+
+
+
+<div class="elementor-container elementor-column-gap-default">
+    <div class="elementor-column elementor-col-16 elementor-top-column elementor-element elementor-element-1a29f1e column-member" data-id="1a29f1e" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-e220028 elementor-widget elementor-widget-wew-member" data-id="e220028" data-element_type="widget" data-widget_type="wew-member.default">
+<div class="elementor-widget-container">
+
+<div class="wew-member-wrap">
+
+            <div class="wew-member-image">
+    <img decoding="async" src="https://demo-57.woovinapro.com/wp-content/uploads/2021/10/member-1.jpg" title="member-1" alt="member-1" loading="lazy" class="  lazyload-loaded">				<div class="wew-member-icons">
+
+    <a href="#" class="wew-member-icon elementor-repeater-item-c2bea06" target="_blank">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+    </a>
+
+    <a href="#" class="wew-member-icon elementor-repeater-item-ff25fbb" target="_blank">
+        <i class="fa fa-pinterest" aria-hidden="true"></i>
+    </a>
+
+    <a href="#" class="wew-member-icon elementor-repeater-item-2d8c482" target="_blank">
+        <i class="fa fa-google-plus" aria-hidden="true"></i>
+    </a>
+            </div></div>
+        
+<div class="wew-member-content">
+                    <h3 class="wew-member-name">
+        James Smith					</h3>
+
+                    <span class="wew-member-role">CEO &amp; Founder</span>
+
+            </div>
+
+
+</div>
+
+</div>
+</div>
+    </div>
+</div>
+<div class="elementor-column elementor-col-16 elementor-top-column elementor-element elementor-element-64869b5 column-member" data-id="64869b5" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-0903364 elementor-widget elementor-widget-wew-member" data-id="0903364" data-element_type="widget" data-widget_type="wew-member.default">
+<div class="elementor-widget-container">
+
+<div class="wew-member-wrap">
+
+            <div class="wew-member-image">
+    <img decoding="async" src="https://demo-57.woovinapro.com/wp-content/uploads/2021/10/member-2.jpg" title="member-2" alt="member-2" loading="lazy" class="  lazyload-loaded">				<div class="wew-member-icons">
+
+    <a href="#" class="wew-member-icon elementor-repeater-item-c2bea06" target="_blank">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+    </a>
+
+    <a href="#" class="wew-member-icon elementor-repeater-item-ff25fbb" target="_blank">
+        <i class="fa fa-pinterest" aria-hidden="true"></i>
+    </a>
+
+    <a href="#" class="wew-member-icon elementor-repeater-item-2d8c482" target="_blank">
+        <i class="fa fa-google-plus" aria-hidden="true"></i>
+    </a>
+            </div></div>
+        
+<div class="wew-member-content">
+                    <h3 class="wew-member-name">
+        Timmy Morrison					</h3>
+
+                    <span class="wew-member-role">Marketing</span>
+
+            </div>
+
+
+</div>
+
+</div>
+</div>
+    </div>
+</div>
+<div class="elementor-column elementor-col-16 elementor-top-column elementor-element elementor-element-6f6bf42 column-member" data-id="6f6bf42" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-4df70d2 elementor-widget elementor-widget-wew-member" data-id="4df70d2" data-element_type="widget" data-widget_type="wew-member.default">
+<div class="elementor-widget-container">
+
+<div class="wew-member-wrap">
+
+            <div class="wew-member-image">
+    <img decoding="async" src="https://demo-57.woovinapro.com/wp-content/uploads/2021/10/member-3.jpg" title="member-3" alt="member-3" loading="lazy" class="  lazyload-loaded">				<div class="wew-member-icons">
+
+    <a href="#" class="wew-member-icon elementor-repeater-item-c2bea06" target="_blank">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+    </a>
+
+    <a href="#" class="wew-member-icon elementor-repeater-item-ff25fbb" target="_blank">
+        <i class="fa fa-pinterest" aria-hidden="true"></i>
+    </a>
+
+    <a href="#" class="wew-member-icon elementor-repeater-item-2d8c482" target="_blank">
+        <i class="fa fa-google-plus" aria-hidden="true"></i>
+    </a>
+            </div></div>
+        
+<div class="wew-member-content">
+                    <h3 class="wew-member-name">
+        Crystal Buchanan					</h3>
+
+                    <span class="wew-member-role">Tech Leader</span>
+
+            </div>
+
+
+</div>
+
+</div>
+</div>
+    </div>
+</div>
+<div class="elementor-column elementor-col-16 elementor-top-column elementor-element elementor-element-f661f1f column-member" data-id="f661f1f" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-72722f0 elementor-widget elementor-widget-wew-member" data-id="72722f0" data-element_type="widget" data-widget_type="wew-member.default">
+<div class="elementor-widget-container">
+
+<div class="wew-member-wrap">
+
+            <div class="wew-member-image">
+    <img decoding="async" src="https://demo-57.woovinapro.com/wp-content/uploads/2021/10/member-4.jpg" title="member-4" alt="member-4" loading="lazy" class="  lazyload-loaded">				<div class="wew-member-icons">
+
+    <a href="#" class="wew-member-icon elementor-repeater-item-c2bea06" target="_blank">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+    </a>
+
+    <a href="#" class="wew-member-icon elementor-repeater-item-ff25fbb" target="_blank">
+        <i class="fa fa-pinterest" aria-hidden="true"></i>
+    </a>
+
+    <a href="#" class="wew-member-icon elementor-repeater-item-2d8c482" target="_blank">
+        <i class="fa fa-google-plus" aria-hidden="true"></i>
+    </a>
+            </div></div>
+        
+<div class="wew-member-content">
+                    <h3 class="wew-member-name">
+        Darrel French					</h3>
+
+                    <span class="wew-member-role">Manager</span>
+
+            </div>
+
+
+</div>
+
+</div>
+</div>
+    </div>
+</div>
+<div class="elementor-column elementor-col-16 elementor-top-column elementor-element elementor-element-6cca55e column-member" data-id="6cca55e" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-8757638 elementor-widget elementor-widget-wew-member" data-id="8757638" data-element_type="widget" data-widget_type="wew-member.default">
+<div class="elementor-widget-container">
+
+<div class="wew-member-wrap">
+
+            <div class="wew-member-image">
+    <img decoding="async" src="https://demo-57.woovinapro.com/wp-content/uploads/2021/10/member-5.jpg" title="member-5" alt="member-5" loading="lazy" class="  lazyload-loaded">				<div class="wew-member-icons">
+
+    <a href="#" class="wew-member-icon elementor-repeater-item-c2bea06" target="_blank">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+    </a>
+
+    <a href="#" class="wew-member-icon elementor-repeater-item-ff25fbb" target="_blank">
+        <i class="fa fa-pinterest" aria-hidden="true"></i>
+    </a>
+
+    <a href="#" class="wew-member-icon elementor-repeater-item-2d8c482" target="_blank">
+        <i class="fa fa-google-plus" aria-hidden="true"></i>
+    </a>
+            </div></div>
+        
+<div class="wew-member-content">
+                    <h3 class="wew-member-name">
+        Gabriel Barker					</h3>
+
+                    <span class="wew-member-role">Designer</span>
+
+            </div>
+
+
+</div>
+
+</div>
+</div>
+    </div>
+</div>
+<div class="elementor-column elementor-col-16 elementor-top-column elementor-element elementor-element-14c2ec3 column-member" data-id="14c2ec3" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-a7d2498 elementor-widget elementor-widget-wew-member" data-id="a7d2498" data-element_type="widget" data-widget_type="wew-member.default">
+<div class="elementor-widget-container">
+
+<div class="wew-member-wrap">
+
+            <div class="wew-member-image">
+    <img decoding="async" src="https://demo-57.woovinapro.com/wp-content/uploads/2021/10/member-6.jpg" title="member-6" alt="member-6" loading="lazy" class="  lazyload-loaded">				<div class="wew-member-icons">
+
+    <a href="#" class="wew-member-icon elementor-repeater-item-c2bea06" target="_blank">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+    </a>
+
+    <a href="#" class="wew-member-icon elementor-repeater-item-ff25fbb" target="_blank">
+        <i class="fa fa-pinterest" aria-hidden="true"></i>
+    </a>
+
+    <a href="#" class="wew-member-icon elementor-repeater-item-2d8c482" target="_blank">
+        <i class="fa fa-google-plus" aria-hidden="true"></i>
+    </a>
+            </div></div>
+        
+<div class="wew-member-content">
+                    <h3 class="wew-member-name">
+        Jennifer lawrence					</h3>
+
+                    <span class="wew-member-role">Marketing </span>
+
+            </div>
+
+
+</div>
+
+</div>
+</div>
+    </div>
+</div>
+            </div>

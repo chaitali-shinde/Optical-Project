@@ -1,0 +1,501 @@
+/* use google poppins font.... */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 70%;
+    overflow-x: hidden;
+}
+
+/* navbar.............. */
+.header{
+    height: auto;
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background-color: white;
+    /* box-shadow: 0.5rem 1rem rgba(0, 0, 0, .1); */
+    box-shadow: 2px 9px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-content: center; 
+}
+
+.logo{
+    font-size:40px ;
+    color: black;
+    font-weight: bolder;
+    margin: auto;
+    text-decoration: none;
+    padding-left: 30px;
+    /* padding: 15px; */
+}
+
+/* .logo img{
+    width: 220px;
+    height: 110px;
+} */
+
+.navbar{
+    margin: auto;
+}
+
+.navbar ul{
+    list-style:none ;
+}
+
+.navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.navbar ul li:hover ul{
+    display: block;
+}
+
+.navbar ul li a{
+    font-size: 1.7rem;
+    color:rgb(41, 41, 42);
+    padding: 2rem;
+    display: block;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover{
+    text-decoration: underline;
+    color: black;
+}
+
+.navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 20rem;
+    background: white;
+    display: none;
+
+}
+
+.navbar ul li ul li{
+    width: 100%;
+}
+
+.icons{
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    cursor:pointer; 
+    margin: auto;
+    /* padding: 30px; */
+}
+
+.icons:hover{
+    color: rgb(235, 16, 53);
+}
+
+.icons a{
+    font-size: 30px;
+    color: black;
+    cursor:pointer;
+    text-decoration: none;
+}
+
+.icons a:hover{
+    color: rgb(235, 16, 53);
+}
+
+
+
+/* blogs csss start...................... */
+
+section{
+    padding: 2rem;
+}
+.heading{
+    background: #ea5ea2;
+    justify-content: center;
+    text-align: center;
+}
+
+.heading h1{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.heading p {
+    color: #fff;
+    padding-top: 0.7rem;
+    font-size: 1.7rem;
+}
+
+
+
+
+/* lATESTS NEWS................ */
+
+.callus h1{
+    font-size: 30px;
+    /* line-height: 2.5; */
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+    padding-top: 30px;
+}
+
+/* CALL US OR VISIT PLACE........... */
+ h1{
+    font-size: 50px;
+    /* line-height: 2.5; */
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+    /* background-color: aqua; */
+}
+
+/* contact us css starts................................... */
+.aept{
+    width: 100%;
+    height: auto;
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+    gap: 10px;
+    /* border: 1px solid black; */
+}
+
+.aept .div1{
+    width: 80%;
+    height: 140px;
+    border: 2px solid rgb(41, 40, 40);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding: 30px; */
+}
+
+.aept .div1 h3{
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+
+.aept .div1 p{
+    font-size: 15px;
+    color: rgb(55, 53, 53);
+}
+
+/* map row.................. */
+.mainmaprow{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    gap: 15px;
+    justify-content: space-around;
+    /* border: 1px solid black; */
+    padding-top: 50px;
+}
+
+
+.mainmaprow .map{
+    width: 40%;
+    height: 600px;
+    /* border: 1px solid red; */
+    /* justify-content: space-between; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* .....send msg form........... */
+.mainmaprow .sendmsgform{
+    width: 45%;
+    height: 550px;
+    /* border: 2px solid blue; */
+    background-color: rgb(237, 234, 234);
+}
+
+.sendmsgform h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    /* font-style: italic; */
+    /* margin-bottom: 20px; */
+}
+
+
+label {
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    margin: 30px;
+}
+
+input[type=text] {
+    width: 135%;
+    padding: 7px;
+    margin: 5px 0 15px 0;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    font-size: 16px;
+    border:1px solid black;
+    outline: none;
+}
+
+textarea {
+    width: 135%;
+    padding: 7px;
+    margin: 5px 0 15px 0;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    font-size: 16px;
+    border: 1px solid black;
+    outline: none;
+}
+
+input[type=submit]{
+    background-color:black;
+    color: white;
+    width: 100%;
+    padding: 7px;
+    font-size: 16px;
+    outline: none;
+    /* margin-left: 150px; */
+}
+
+input[type=submit]:hover{
+    cursor: pointer;
+    background-color: crimson;
+}
+
+/* contact us css ends................................... */
+.icons-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    gap: 10px;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.icons-container .icons{
+    width: 20%;
+    height: 140px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.icons-container .icons h3{
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+
+.icons-container .icons img{
+    height: 10rem;
+    margin-bottom: 1rem;
+    color: rgb(55, 53, 53);
+}
+
+
+
+
+/* footer starts....................... */
+section{
+    padding: 2rem 10%;  
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: black;
+    border: rgb(9, 9, 9);
+    background: none;
+    cursor: pointer;
+    border-radius: 2rem;
+    border: 2px solid black;
+}
+
+.btn:hover{
+    background: black;
+    color:white;
+}
+
+.footer .box-container{
+    /* grid: 25rem; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.2rem;
+    color: black;
+    padding: 1rem 0;
+    font-weight: bold;
+}
+
+.footer .box-container .box a{
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: block;
+    color: crimson;
+    padding: 1 rem 0;
+    text-decoration: none;
+}
+
+.footer .box-container .box a:hover{
+    color: rgb(5, 5, 5);
+}
+
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+
+.footer .box-container .box a i{
+    color: crimson;
+    padding-right: 0.5rem;
+
+}
+
+form input[type="email"]{
+    width: 100%;
+    padding: 1rem 1.2rem;
+    border-radius: 0.2rem;
+    font-size: 1.6rem;
+    background: rgb(136, 137, 137);
+    text-transform: none;
+    margin: 0.5rem 0;
+}
+
+form input[type="email"]::placeholder{
+    color: black;
+    
+}
+
+.footer .box-container .box p{
+    font-size: 1.5rem;
+    color: rgb(57, 52, 51);
+    margin-bottom: 1rem;
+}
+
+.footer .credit{
+    text-align: center;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    margin-top: 2.5rem;
+    font-size: 2rem;
+    color: rgb(65, 65, 67);
+    border-top:1px solid black;
+}
+
+.footer .credit span{
+    color: rgb(220, 77, 101);
+}
+
+.footer .box-container .btn{
+    display: inline-block;
+    margin-top: 1rem;
+    /* padding: 8rem 2.8rem; */
+    font-size: 1.7rem;
+    color: black;
+    border: 2px solid black;
+    background: none;
+    cursor: pointer;
+}
+
+.footer .box-container .btn:hover{
+    background: black;
+    color: white;
+}
+
+
+
+
+/* ......................media query.............................. */
+
+@media(max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding: 0.2rem;
+    }
+    /* section.......... */
+    section{
+        padding: 2rem;
+    }
+}
+
+
+@media (max-width:768px){
+
+    .header{
+        display: grid;
+    }
+
+    .header ul{
+        display: grid;
+    }
+
+    .callus{
+        display: grid;
+    }
+    .aept{
+        display: grid;
+    }
+
+    .mainmaprow{
+        display: grid;
+    }
+
+    .mainmaprow .sendmsgform{
+        width: 90%;
+    }
+
+    .icons-container{
+        display: grid;
+    }
+
+    .icons-container .icons{
+        width: 90%;
+    }
+    
+    .footer .box-container{
+        display: grid;
+        text-align: center;
+        justify-content: center;
+    }
+
+}
+
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+}
